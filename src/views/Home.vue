@@ -1,6 +1,5 @@
 <template>
   <div>
-    oba
   </div>
 </template>
 
