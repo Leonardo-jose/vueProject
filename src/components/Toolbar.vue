@@ -7,17 +7,18 @@
 
             <v-spacer></v-spacer>
 
-            <v-btn icon>
-                <v-icon>mdi-magnify</v-icon>
-            </v-btn>
+            <div
+                v-for="item in items"
+                :key="item.title"
+                link
+                >
+                <v-btn text>
+                    <v-icon @click="goTo(item.type)">{{ item.icon }}</v-icon>
+                </v-btn>
 
-            <v-btn icon>
-                <v-icon>mdi-heart</v-icon>
-            </v-btn>
+            </div>
+               
 
-            <v-btn icon>
-                <v-icon>mdi-dots-vertical</v-icon>
-            </v-btn>
         </v-toolbar>
         <v-navigation-drawer
             v-model="drawer"
@@ -42,13 +43,11 @@
                 :key="item.title"
                 link
                 >
-                <v-list-item-icon>
-                    <v-icon>{{ item.icon }}</v-icon>
+                <v-list-item-icon @click="goTo(item.type)">
+                    <v-icon class="pr-2">{{ item.icon }} </v-icon>
+                    <v-list-item-title>{{ item.title }}</v-list-item-title>
                 </v-list-item-icon>
 
-                <v-list-item-content>
-                    <v-list-item-title>{{ item.title }}</v-list-item-title>
-                </v-list-item-content>
                 </v-list-item>
             </v-list>
         </v-navigation-drawer>
@@ -61,11 +60,18 @@
       return {
         drawer: null,
         items: [
-          { title: 'Home', icon: 'mdi-view-dashboard' },
-          { title: 'About', icon: 'mdi-forum' },
+          { title: 'Home', icon: 'mdi-home-outline', type:'home' },
+          { title: 'About', icon: 'mdi-forum', type:'about'},
+          { title: 'Pokemon', icon: 'mdi-pokeball', type:'pokemon'},
+          { title: 'Profile', icon: 'mdi-account', type:'profile'},
         ],
       }
     },
+    methods:{
+        goTo(name){
+            this.$router.push(name)
+        }
+    }
   }
 </script>
 
