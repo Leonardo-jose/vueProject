@@ -20,7 +20,7 @@ npm run build
 npm run lint
 ```
 <p align="center">
-<img src="./src/assets/Readme.png" width="70%">
+<img src="./src/assets/Readmehome.png" width="70%">
 </p>
 
 <p align="center">
