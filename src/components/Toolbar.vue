@@ -61,7 +61,7 @@
         drawer: null,
         items: [
           { title: 'Home', icon: 'mdi-home-outline', type:'home' },
-          { title: 'About', icon: 'mdi-forum', type:'about'},
+          { title: 'Cards', icon: 'mdi-forum', type:'cards'},
           { title: 'Pokemon', icon: 'mdi-pokeball', type:'pokemon'},
           { title: 'Profile', icon: 'mdi-account', type:'profile'},
         ],
