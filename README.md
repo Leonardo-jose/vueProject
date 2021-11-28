@@ -20,19 +20,19 @@ npm run build
 npm run lint
 ```
 <p align="center">
-<img src="./src/assets/Readmehome.png" width="70%">
+<img src="./src/assets/Readmehome.PNG" width="70%">
 </p>
 
 <p align="center">
-<img src="./src/assets/readmecard.png" width="70%">
+<img src="./src/assets/readmecard.PNG" width="70%">
 </p>
 
 <p align="center">
-<img src="./src/assets/readmepkmn.png" width="70%">
+<img src="./src/assets/readmepkmn.PNG" width="70%">
 </p>
 
 <p align="center">
-<img src="./src/assets/readmeprofile.png" width="70%">
+<img src="./src/assets/readmeprofile.PNG" width="70%">
 </p>
 
 
