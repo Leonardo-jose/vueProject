@@ -1,6 +1,6 @@
 import Vue from "vue"
 import Vuex from "vuex"
-
+import axios from "axios"
 
 Vue.use(Vuex)
 
@@ -17,8 +17,23 @@ export default new Vuex.Store({
       {name:"GreatBall", src: require("../assets/greatball.png")}, 
       {name:"UltraBall", src: require("../assets/ultraball.png")},
     ],
+    pkmn: [],
   },
-  mutations: { },
-  actions: {},
+  mutations: { 
+    SET_PKMN(state, payload){
+      state.pkmn=payload
+    }
+  },
+  actions: { 
+    fetchEvents({commit}){
+      axios.get("https://pokeapi.co/api/v2/pokemon/1")
+        .then(res=>{
+          const payload = res
+          console.log(payload)
+          commit('SET_PKMN', payload)
+        })
+        .catch(err=>{console.log(err)})
+    }
+  },
   getters: { }
 })
